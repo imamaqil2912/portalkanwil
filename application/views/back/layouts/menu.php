@@ -41,7 +41,7 @@ if($this->ion_auth->is_admin())
         </a>
         <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o"></i> Sinkronasi Data STKAA</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi User</a></li>
+            <li><a href="<?php echo site_url('users') ?>"><i class="fa fa-circle-o"></i> Administrasi User</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi Link</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi Pengumuman</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi Software & Driver</a></li>

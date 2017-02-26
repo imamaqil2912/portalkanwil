@@ -19,13 +19,12 @@
 </form>
 <!-- /.search form -->
 <!-- sidebar menu: : style can be found in sidebar.less -->
-
 <?php
 /// menu untuk administrator
 if($this->ion_auth->is_admin())
 {
 ?>
-<ul class="sidebar-menu">
+    <ul class="sidebar-menu">
 <li class="header">MENU ADMINISTRATOR</li>
     <li class="active">
         <a href="#">
@@ -79,9 +78,9 @@ if($this->ion_auth->is_admin())
     </li>
 <?php
 }else{
-    
+    /// menu untuk users
 ?>
-<li class="treeview">
+    <li class="treeview">
         <a href="#">
         <i class="fa fa-exchange"></i>
         <span>Monitoring</span>
@@ -96,5 +95,6 @@ if($this->ion_auth->is_admin())
         </ul>
     </li>
 <?php
+}
 ?>
 </ul>

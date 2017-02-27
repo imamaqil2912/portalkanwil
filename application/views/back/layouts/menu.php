@@ -40,19 +40,11 @@ if($this->ion_auth->is_admin())
         </span>
         </a>
         <ul class="treeview-menu">
-<<<<<<< HEAD
             <li><a href="#"><i class="fa fa-circle-o"></i> Sinkronasi Data STKAA</a></li>
             <li><a href="<?php echo site_url('users') ?>"><i class="fa fa-circle-o"></i> Administrasi User</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi Link</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi Pengumuman</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Administrasi Software & Driver</a></li>
-=======
-            <li><a href="#"><i class="fa fa-group"></i> Sinkronasi Data SIKKA</a></li>
-            <li><a href="#"><i class="fa fa-users"></i> Administrasi User</a></li>
-            <li><a href="#"><i class="fa fa-link"></i> Administrasi Link</a></li>
-            <li><a href="#"><i class="fa fa-file-sound-o"></i> Administrasi Pengumuman</a></li>
-            <li><a href="#"><i class="fa fa-file"></i> Administrasi Software & Driver</a></li>
->>>>>>> 3aae7c2fdbe68550fbd08b42a480f0dcc8bcb6e6
         </ul>
     </li>
         <li class="treeview">

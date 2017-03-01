@@ -82,12 +82,12 @@
 		<div class="row">
 			<div class="span6">
 				<p>
-					&copy; Scaffold 2013 - All right reserved
+					&copy; Duktekkom 2017 - All right reserved
 				</p>
 			</div>
 			<div class="span6">
 				<p class="pull-right">
-					Designed by <a href="http://iweb-studio.com">iWebStudio</a>
+					Designed by <a href="http://iweb-studio.com">@aqilbani</a>
 				</p>
 			</div>
 		</div>

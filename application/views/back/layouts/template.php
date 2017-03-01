@@ -25,8 +25,8 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <script src="<?php echo base_url() ?>assets/dist/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="<?php echo base_url() ?>assets/dist/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
@@ -57,28 +57,25 @@
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="http://portalkanwil.dev/assets/img/user.png" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Alexander Pierce</span>
+                                    <img src="<?php echo base_url() ?>/assets/img/user.png" class="user-image" alt="User Image">
+                                    <span class="hidden-xs">Imam Aqil Rabbani</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src="http://portalkanwil.dev/assets/img/user.png" class="img-circle" alt="User Image">
-                                        <p>
-                                            Alexander Pierce - Web Developer
-                                            <small>Member since Nov. 2012</small>
-                                        </p>
+                                        <img src="<?php echo base_url() ?>/assets/img/user.png" class="img-circle" alt="User Image">
+                                        <p style="font-size: 12px">
+                                            Imam Aqil Rabbani - Seksi Duktekkom Kanwil DJP Jakarta Utara
+                                            <small>Member since Feb. 2017</small>
+                                         </p>
                                     </li>
                                     <!-- Menu Body -->
                                     <li class="user-body">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
+                                        <div class="col-xs-6 text-center">
+                                            <a href="#">Ganti Password</a>
                                         </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
+                                        <div class="col-xs-6 text-center">
+                                            <a href="#">Notifikasi</a>
                                         </div>
                                     </li>
                                     <!-- Menu Footer-->
@@ -110,10 +107,10 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="http://portalkanwil.dev/assets/img/user.png" class="img-circle" alt="User Image">
+                            <img src="<?php echo base_url() ?>/assets/img/user.png" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Alexander Pierce</p>
+                            <p>Imam Aqil Rabbani</p>
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
@@ -133,9 +130,7 @@
                         <ul class="sidebar-menu">
                         <li class="header">MENU ADMINISTRATOR</li>
                             <li class="active">
-                                <a href="#">
-                                    <i class="fa fa-home"></i> <span>Beranda</span>
-                                </a>
+                                <?php echo anchor("Home", "<i class='fa fa-home'></i> <span>" . "Beranda") . "</span>"; ?>
                             </li>
                         <?php
                         $menu = $this->db->get_where('menu', array('is_parent' => 0,'is_active'=>1));
@@ -155,7 +150,6 @@
                             }else{
                                 echo "<li>" . anchor($m->link, "<i class='$m->icon'></i> <span>" . ($m->name)) . "</span></li>";
                             }
-                            
                         }
                         ?>
 
@@ -169,13 +163,13 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Data Tables
-                        <small>advanced tables</small>
+                        Dashboard Portal
+                        <small>Kanwil DJP Jakarta Utara</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">Tables</a></li>
-                        <li class="active">Data tables</li>
+                        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+                        <li><a href="#">Dashboard Portal</a></li>
+                        <li class="active">Beranda</li>
                     </ol>
                 </section>
 
@@ -189,9 +183,9 @@
             </div><!-- /.content-wrapper -->
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
-                    <b>Version</b> 2.3.0
+                    <b>Version</b> 2.0
                 </div>
-                <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+                <strong>Copyright &copy; 2017 <a href="#">Duktekkom Kanwil DJP Jakarta Utara</a>.</strong> All rights reserved.
             </footer>
 
             <!-- Add the sidebar's background. This div must be placed

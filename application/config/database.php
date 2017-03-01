@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'server.ihsanarif.com',
-	'username' => 'imam',
-	'password' => 'ImaMT34!!!',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'portal_120',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

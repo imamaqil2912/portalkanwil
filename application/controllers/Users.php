@@ -1,140 +1,224 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
 
-	function __construct(){
-    	parent::__construct();
-    	if($this->ion_auth->logged_in() != true){
-    		redirect('auth/login');
-    	}
-        $this->load->model('users_model');
-        $this->load->model('group_model');
-  	}
-
-	public function index()
-	{
-		$data['main'] = 'back/users/index';
-        $data['menu'] = 101;
-        $data['judul'] = 'Administrasi Pengguna';
-        $data['breadcrumb'] = array('Beranda','Settings','Administrasi Users');
-
-        $data['users'] = $this->users_model->viewall()->result();
-
-        $data['css'] = array('plugins/datatables/dataTables.bootstrap');
-        $data['js'] = array('plugins/datatables/jquery.dataTables.min','plugins/datatables/dataTables.bootstrap.min');
-		$this->load->view('back/layouts/master',$data);
-	}
-
+class Users extends CI_Controller
+{
     
-
-    public function create()
-    {
-        $data['main']='back/users/create';
-		$data['menu']= 101;
-		$data['judul'] = 'Tambah Administrasi Users';
-        $data['breadcrumb'] = array('Beranda','Settings','Administrasi Users','Tambah Users');
-
-        $data['groups'] = $this->group_model->viewall()->result();
-
-        $data['css'] = array('');
-        $data['js'] = array('');
-		$this->load->view('back/layouts/master',$data);
-    }
-
-    public function view($id)
-    {}
-
-    public function save()
-    {
-        $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('password', 'password', 'required');
-        $this->form_validation->set_rules('email', 'email', 'required');
-        $this->form_validation->set_rules('first_name', 'first_name', 'required');
-        $this->form_validation->set_rules('last_name', 'last_name', 'required');
-        $this->form_validation->set_rules('company', 'company', 'required');
-        $this->form_validation->set_rules('phone', 'phone', 'required');
-        $this->form_validation->set_rules('group', 'group', 'required');
         
-        if ($this->form_validation->run() == FALSE)
-        {
-            $data['main']='back/users/create';
-            $data['menu']= 101;
-            $data['judul'] = 'Tambah Administrasi Users';
-            $data['breadcrumb'] = array('Beranda','Settings','Administrasi Users','Tambah Users');
-
-            $data['groups'] = $this->group_model->viewall()->result();
-            $this->session->set_flashdata('status','danger');
-            $this->session->set_flashdata('message', validation_errors());
-
-            $data['css'] = array('');
-            $data['js'] = array('');
-            $this->load->view('back/layouts/master',$data);
-            
-        }
-        else
-        {
-            $this->users_model->save($data);
-            redirect('users');
-        }
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Users_model');
+        $this->load->library('form_validation');
     }
 
-
-    public function edit($id)
+    public function index()
     {
-        if(empty($id))
-        {
-            redirect('home');
-        }
-
-        $data['main']='golongan_darah/edit';
-		$data['menu']=1;
-		$data['judul']='Edit Golongan Darah';
-
-        $data['gol_darah'] = $this->golongan_darah_model->select_by_id($id)->row();
-		$this->load->view('layouts/master',$data);
-
-    }
-
-    public function update()
-    {
-         $this->form_validation->set_rules('nama', 'Golongan Darah', 'required');
+        $users = $this->Users_model->get_all();
 
         $data = array(
-            'id' => $this->input->post('id'),
-            'nama' => $this->input->post('nama'),
+            'users_data' => $users
         );
 
-        if ($this->form_validation->run() == FALSE)
-        {
-            $this->session->set_flashdata('status','danger');
-            $this->session->set_flashdata('message', validation_errors());
-
-            return $this->edit($data['id']);
-        }
-        else
-        {
-            $this->golongan_darah_model->update($data);
-            $this->session->set_flashdata('status','success');
-            $this->session->set_flashdata('message', 'Ubah data Golongan Darah sudah selesai');
-            redirect('golongan_darah');
-        }
+        $this->template->load('template','users_list', $data);
     }
 
-    public function delete($id)
+    public function read($id) 
     {
-       if(empty($id))
-        {
-            $this->session->set_flashdata('status','danger');
-            $this->session->set_flashdata('message', 'Anda Tidak bisa akses');
-            redirect('golongan_darah');
-        }
-        else
-        {
-            $this->golongan_darah_model->delete($id);
-            $this->session->set_flashdata('status','success');
-            $this->session->set_flashdata('message', 'Hapus data Golongan Darah sudah selesai');
-            redirect('golongan_darah');   
+        $row = $this->Users_model->get_by_id($id);
+        if ($row) {
+            $data = array(
+		'id' => $row->id,
+		'ip_address' => $row->ip_address,
+		'username' => $row->username,
+		'password' => $row->password,
+		'salt' => $row->salt,
+		'email' => $row->email,
+		'activation_code' => $row->activation_code,
+		'forgotten_password_code' => $row->forgotten_password_code,
+		'forgotten_password_time' => $row->forgotten_password_time,
+		'remember_code' => $row->remember_code,
+		'created_on' => $row->created_on,
+		'last_login' => $row->last_login,
+		'active' => $row->active,
+		'first_name' => $row->first_name,
+		'last_name' => $row->last_name,
+		'company' => $row->company,
+		'phone' => $row->phone,
+	    );
+            $this->template->load('template','users_read', $data);
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('users'));
         }
     }
+
+    public function create() 
+    {
+        $data = array(
+            'button' => 'Create',
+            'action' => site_url('users/create_action'),
+	    'id' => set_value('id'),
+	    'ip_address' => set_value('ip_address'),
+	    'username' => set_value('username'),
+	    'password' => set_value('password'),
+	    'salt' => set_value('salt'),
+	    'email' => set_value('email'),
+	    'activation_code' => set_value('activation_code'),
+	    'forgotten_password_code' => set_value('forgotten_password_code'),
+	    'forgotten_password_time' => set_value('forgotten_password_time'),
+	    'remember_code' => set_value('remember_code'),
+	    'created_on' => set_value('created_on'),
+	    'last_login' => set_value('last_login'),
+	    'active' => set_value('active'),
+	    'first_name' => set_value('first_name'),
+	    'last_name' => set_value('last_name'),
+	    'company' => set_value('company'),
+	    'phone' => set_value('phone'),
+	);
+        $this->template->load('template','users_form', $data);
+    }
+    
+    public function create_action() 
+    {
+        $this->_rules();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->create();
+        } else {
+            $data = array(
+		'ip_address' => $this->input->post('ip_address',TRUE),
+		'username' => $this->input->post('username',TRUE),
+		'password' => $this->input->post('password',TRUE),
+		'salt' => $this->input->post('salt',TRUE),
+		'email' => $this->input->post('email',TRUE),
+		'activation_code' => $this->input->post('activation_code',TRUE),
+		'forgotten_password_code' => $this->input->post('forgotten_password_code',TRUE),
+		'forgotten_password_time' => $this->input->post('forgotten_password_time',TRUE),
+		'remember_code' => $this->input->post('remember_code',TRUE),
+		'created_on' => $this->input->post('created_on',TRUE),
+		'last_login' => $this->input->post('last_login',TRUE),
+		'active' => $this->input->post('active',TRUE),
+		'first_name' => $this->input->post('first_name',TRUE),
+		'last_name' => $this->input->post('last_name',TRUE),
+		'company' => $this->input->post('company',TRUE),
+		'phone' => $this->input->post('phone',TRUE),
+	    );
+
+            $this->Users_model->insert($data);
+            $this->session->set_flashdata('message', 'Create Record Success');
+            redirect(site_url('users'));
+        }
+    }
+    
+    public function update($id) 
+    {
+        $row = $this->Users_model->get_by_id($id);
+
+        if ($row) {
+            $data = array(
+                'button' => 'Update',
+                'action' => site_url('users/update_action'),
+		'id' => set_value('id', $row->id),
+		'ip_address' => set_value('ip_address', $row->ip_address),
+		'username' => set_value('username', $row->username),
+		'password' => set_value('password', $row->password),
+		'salt' => set_value('salt', $row->salt),
+		'email' => set_value('email', $row->email),
+		'activation_code' => set_value('activation_code', $row->activation_code),
+		'forgotten_password_code' => set_value('forgotten_password_code', $row->forgotten_password_code),
+		'forgotten_password_time' => set_value('forgotten_password_time', $row->forgotten_password_time),
+		'remember_code' => set_value('remember_code', $row->remember_code),
+		'created_on' => set_value('created_on', $row->created_on),
+		'last_login' => set_value('last_login', $row->last_login),
+		'active' => set_value('active', $row->active),
+		'first_name' => set_value('first_name', $row->first_name),
+		'last_name' => set_value('last_name', $row->last_name),
+		'company' => set_value('company', $row->company),
+		'phone' => set_value('phone', $row->phone),
+	    );
+            $this->template->load('template','users_form', $data);
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('users'));
+        }
+    }
+    
+    public function update_action() 
+    {
+        $this->_rules();
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->update($this->input->post('id', TRUE));
+        } else {
+            $data = array(
+		'ip_address' => $this->input->post('ip_address',TRUE),
+		'username' => $this->input->post('username',TRUE),
+		'password' => $this->input->post('password',TRUE),
+		'salt' => $this->input->post('salt',TRUE),
+		'email' => $this->input->post('email',TRUE),
+		'activation_code' => $this->input->post('activation_code',TRUE),
+		'forgotten_password_code' => $this->input->post('forgotten_password_code',TRUE),
+		'forgotten_password_time' => $this->input->post('forgotten_password_time',TRUE),
+		'remember_code' => $this->input->post('remember_code',TRUE),
+		'created_on' => $this->input->post('created_on',TRUE),
+		'last_login' => $this->input->post('last_login',TRUE),
+		'active' => $this->input->post('active',TRUE),
+		'first_name' => $this->input->post('first_name',TRUE),
+		'last_name' => $this->input->post('last_name',TRUE),
+		'company' => $this->input->post('company',TRUE),
+		'phone' => $this->input->post('phone',TRUE),
+	    );
+
+            $this->Users_model->update($this->input->post('id', TRUE), $data);
+            $this->session->set_flashdata('message', 'Update Record Success');
+            redirect(site_url('users'));
+        }
+    }
+    
+    public function delete($id) 
+    {
+        $row = $this->Users_model->get_by_id($id);
+
+        if ($row) {
+            $this->Users_model->delete($id);
+            $this->session->set_flashdata('message', 'Delete Record Success');
+            redirect(site_url('users'));
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('users'));
+        }
+    }
+
+    public function _rules() 
+    {
+	$this->form_validation->set_rules('ip_address', 'ip address', 'trim|required');
+	$this->form_validation->set_rules('username', 'username', 'trim|required');
+	$this->form_validation->set_rules('password', 'password', 'trim|required');
+	$this->form_validation->set_rules('salt', 'salt', 'trim|required');
+	$this->form_validation->set_rules('email', 'email', 'trim|required');
+	$this->form_validation->set_rules('activation_code', 'activation code', 'trim|required');
+	$this->form_validation->set_rules('forgotten_password_code', 'forgotten password code', 'trim|required');
+	$this->form_validation->set_rules('forgotten_password_time', 'forgotten password time', 'trim|required');
+	$this->form_validation->set_rules('remember_code', 'remember code', 'trim|required');
+	$this->form_validation->set_rules('created_on', 'created on', 'trim|required');
+	$this->form_validation->set_rules('last_login', 'last login', 'trim|required');
+	$this->form_validation->set_rules('active', 'active', 'trim|required');
+	$this->form_validation->set_rules('first_name', 'first name', 'trim|required');
+	$this->form_validation->set_rules('last_name', 'last name', 'trim|required');
+	$this->form_validation->set_rules('company', 'company', 'trim|required');
+	$this->form_validation->set_rules('phone', 'phone', 'trim|required');
+
+	$this->form_validation->set_rules('id', 'id', 'trim');
+	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+    }
+
 }
+
+/* End of file Users.php */
+/* Location: ./application/controllers/Users.php */
+/* Please DO NOT modify this information : */
+/* Generated by Harviacode Codeigniter CRUD Generator 2017-03-01 08:59:15 */
+/* http://harviacode.com */

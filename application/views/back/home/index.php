@@ -3,7 +3,7 @@
     <!-- Main row -->
     <div class="row">
     <!-- Left col -->
-    <h1>Selamat Datang</h1>
+    <h1></h1>
     </div>
     <!-- /.row (main row) -->
 </section>

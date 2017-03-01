@@ -13,14 +13,10 @@
 				<nav>
 				<ul class="nav topnav">
 					<li class="dropdown success active">
-					<a href="index.html"><i class="icon-home icon-white"></i> Home</a>
-					<ul class="dropdown-menu">
-						<li><a href="index_alt1.html">Index alt 1</a></li>
-						<li><a href="index_alt2.html">Index alt 2</a></li>
-					</ul>
+					<a href="index.html"><i class="icon-home icon-white"></i>Home</a>
 					</li>
-					<li class="dropdown primary">
-					<a href="#"><i class="icon-star icon-white"></i> Features</a>
+					<!--	<li class="dropdown primary">
+					<a href="#"><i class="icon-star icon-white"></i>Pencarian Wajib Pajak</a>
 					<ul class="dropdown-menu">
 						<li><a href="overview.html">Overview</a></li>
 						<li><a href="scaffolding.html">Scaffolding</a></li>
@@ -36,19 +32,8 @@
 						</li>
 					</ul>
 					</li>
-					<li class="dropdown danger">
-					<a href="#"><i class="icon-leaf icon-white"></i> Pages</a>
-					<ul class="dropdown-menu">
-						<li><a href="about.html">About us</a></li>
-						<li><a href="services.html">Our services</a></li>
-						<li><a href="pricingtable.html">Pricing table</a></li>
-						<li><a href="faq.html">F.A.Q</a></li>
-						<li><a href="fullwidth.html">Fullwidth</a></li>
-						<li><a href="404.html">404</a></li>
-					</ul>
-					</li>
 					<li class="dropdown warning">
-					<a href="#"><i class="icon-camera icon-white"></i> Portfolio</a>
+					<a href="#"><i class="icon-camera icon-white"></i>Download Driver dan File</a>
 					<ul class="dropdown-menu">
 						<li class="dropdown"><a href="#">Portfolio type 1</a>
 						<ul class="dropdown-menu sub-menu">
@@ -68,7 +53,7 @@
 						<li><a href="portfolio-detail.html">Portfolio detail</a></li>
 					</ul>
 					</li>
-					<li class="dropdown info">
+					<!-- <li class="dropdown info"> */ 
 					<a href="#"><i class="icon-bullhorn icon-white"></i> Blog</a>
 					<ul class="dropdown-menu">
 						<li><a href="blog_left_sidebar.html">Blog left sidebar</a></li>
@@ -76,9 +61,9 @@
 						<li><a href="post_left_sidebar.html">Post left sidebar</a></li>
 						<li><a href="post_right_sidebar.html">Post right sidebar</a></li>
 					</ul>
-					</li>
+					</li> -->
 					<li class="inverse">
-					<a href="contact.html"><i class="icon-envelope icon-white"></i> Contact</a>
+					<a href="<?php echo base_url() ?>Menu"><i class="icon-envelope icon-white"></i> Login</a>
 					</li>
 				</ul>
 				</nav>

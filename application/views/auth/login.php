@@ -34,11 +34,12 @@
 </div>
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Portal</b>Kanwil</a>
+    <a href="../../index2.html">
+	<img src=/portalkanwil/assets/img/LOGO.png width="650" height="500"></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Lakukan Log in untuk memulai Sesi anda</p>
     <div id="infoMessage"><?php echo $message;?></div>
     <?php echo form_open("auth/login");?>
     <div class="form-group has-feedback">
@@ -62,7 +63,7 @@
     </div>
     <!-- /.social-auth-links -->
 
-    <a href="forgot_password">I forgot my password</a><br>
+    <a href="forgot_password">Lupa Kata Sandi?</a><br>
   </div>
   <!-- /.login-box-body -->
 </div>

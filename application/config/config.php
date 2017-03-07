@@ -23,11 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
-$config['base_url'] = 'http://localhost/portalkanwildev';
-=======
+
 $config['base_url'] = 'http://localhost/portalkanwil';
->>>>>>> 4e6f580975ca46c8bd2e0150692ccf44f0440a57
 
 /*
 |--------------------------------------------------------------------------

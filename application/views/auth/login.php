@@ -35,16 +35,23 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html">
-	<img src=/portalkanwil/assets/img/LOGO.png width="650" height="500"></a>
+	<img src=/portalkanwil/assets/img/LOGO.png width="250" height="100"></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Lakukan Log in untuk memulai Sesi anda</p>
+    <p class="login-box-msg">
+	<b>Lakukan Log in untuk memulai Sesi anda</b></p>
     <div id="infoMessage"><?php echo $message;?></div>
     <?php echo form_open("auth/login");?>
+	<p>
+	<b>Nama Pengguna</b>
+	</p>
     <div class="form-group has-feedback">
       <?php echo form_input($identity);?>
     </div>
+	<p>
+	<b>Kata Sandi</b>
+	</p>
     <div class="form-group has-feedback">
       <?php echo form_input($password);?>
     </div>
@@ -57,13 +64,13 @@
       </div>
       <!-- /.col -->
       <div class="col-xs-4">
-        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <button type="submit" class="btn btn-primary btn-block btn-flat">Log in</button>
       </div>
       <!-- /.col -->
     </div>
     <!-- /.social-auth-links -->
 
-    <a href="forgot_password">Lupa Kata Sandi?</a><br>
+    <a href="forgot_password"><b>Lupa Kata Sandi?</b></a><br>
   </div>
   <!-- /.login-box-body -->
 </div>

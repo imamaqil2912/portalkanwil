@@ -76,10 +76,6 @@
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
-<div>
-<center><b>&copy; Duktekkom 2017 - All right reserved</b></center>
-<center><b>Design by</b> <a href="http://instagram.com/m_doang"><b>m_doang</b></a></center>
-</div>
 
 <!-- jQuery 2.2.3 -->
 <script src="<?php echo base_url()?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>

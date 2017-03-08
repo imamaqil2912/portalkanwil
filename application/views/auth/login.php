@@ -35,22 +35,22 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html">
-	<img src=/portalkanwil/assets/img/LOGO.png width="250" height="100"></a>
+	<img src=/portalkanwil/assets/img/LOGO.png width="180" height="50"></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">
-	<b>Lakukan Log in untuk memulai Sesi anda</b></p>
+	<b>Sign in to start your session</b></p>
     <div id="infoMessage"><?php echo $message;?></div>
     <?php echo form_open("auth/login");?>
 	<p>
-	<b>Nama Pengguna</b>
+	<b>Username</b>
 	</p>
     <div class="form-group has-feedback">
       <?php echo form_input($identity);?>
     </div>
 	<p>
-	<b>Kata Sandi</b>
+	<b>Password</b>
 	</p>
     <div class="form-group has-feedback">
       <?php echo form_input($password);?>
@@ -64,21 +64,21 @@
       </div>
       <!-- /.col -->
       <div class="col-xs-4">
-        <button type="submit" class="btn btn-primary btn-block btn-flat">Log in</button>
+        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign in</button>
       </div>
       <!-- /.col -->
     </div>
     <!-- /.social-auth-links -->
 
-    <a href="forgot_password"><b>Lupa Kata Sandi?</b></a><br>
-	<a href="create_user"><b>Belum terdaftar?</b></a><br>
+    <a href="forgot_password"><b>Forgot Password?</b></a><br>
+	<a href="create_user"><b>Register New User</b></a><br>
   </div>
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
 <div>
 <center><b>&copy; Duktekkom 2017 - All right reserved</b></center>
-<center><b>Design by</b> <a href="http://instagram.com/m_doang"><b>m_doang</b></a></center>
+<center><b>Design by</b> <a href="https://www.instagram.com/m_doang/"><b>Muhammad</b></a></center>
 </div>
 
 <!-- jQuery 2.2.3 -->

@@ -5,7 +5,7 @@
 				<div class="row">
 					<div class="span6">
 						<div class="tagline_text">
-							<h2>Scaffold will <span class="text-success">pimp up</span> your website quickly</h2>
+							<h2>Portal Kanwil <span class="text-success">Jakut</span> </h2>
 							<div class="tag_list">
 								<ul>
 									<li><span><i class="icon-fire"></i> Hottest price on the net</span></li>
@@ -39,9 +39,9 @@
 		<div class="span3">
 			<div class="well well-primary box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/box-1-white.png" alt="" />
-				<h3>Responsive bootstrap</h3>
+				<h3>Dashboard Penerimaan</h3>
 				<p>
-					 Dolorem adipiscing definiebas ut nec. Dolore consectetuer eu vim, elit molestie ei has, petentium imperdiet in pri. Mel virtute efficiantur ne zril.
+					 Total Penerimaan Pajak Seluruh KPP di Wilayah Jakarta Utara.
 				</p>
 				<a href="#">Read more</a>
 			</div>
@@ -49,9 +49,9 @@
 		<div class="span3">
 			<div class="well well-success box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/box-2-white.png" alt="" />
-				<h3>With metro taste</h3>
+				<h3>Pencapaian Penerimaan</h3>
 				<p>
-					 Ad sit option intellegat, unum populo comprehensam ut sed. Copiosae corrumpit qui ex, duo nullam feugait qualisque at an dicit saperet.
+					 Total Pencapaian Penerimaan Pajak Kanwil DJP Jakarta Utara.
 				</p>
 				<a href="#">Read more</a>
 			</div>
@@ -59,9 +59,9 @@
 		<div class="span3">
 			<div class="well well-warning box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/box-3-white.png" alt="" />
-				<h3>Well documented</h3>
+				<h3>Apapapapapapapa</h3>
 				<p>
-					 Ne vix clita integre expetenda, eos cetero numquam no, in sea omnes detracto. Ne iriure habemus maiestatis mei. Postea euripidis contentiones.
+					 Apaapapapapapapa.
 				</p>
 				<a href="#">Read more</a>
 			</div>
@@ -77,7 +77,7 @@
 	<!-- end divider -->
 	<div class="row">
 		<div class="span6">
-			<h3 class="heading-success"><span class="btn btn-large btn-success"><i class="m-icon-big-swapright m-icon-white"></i></span>&nbsp;&nbsp;What people are saying</h3>
+			<h3 class="heading-success"><span class="btn btn-large btn-success"><i class="m-icon-big-swapright m-icon-white"></i></span>&nbsp;&nbsp;Pesan Pajak Hari Ini</h3>
 			<div id="myCarousel" class="carousel slide testimonials">
 				<div class="carousel-inner">
 					<div class="item active">
@@ -85,12 +85,12 @@
 							<img src="<?php echo base_url() ?>assets/front/img/dummies/testimonial-author-1.png" alt="" />
 							<blockquote>
 								<p>
-									 Lorem ipsum dolor sit amet, ne has nostro mentitum gubergren, no eam utamur civibus philosophia.
+									 pesan pesan pesan pesan pesan pesan pesan.
 								</p>
 							</blockquote>
 							<div class="info">
-								<span class="author"><strong><a href="#">Kelly Howards</a>,</strong></span>
-								<span class="company">MMC Design - Director</span>
+								<span class="author"><strong><a href="#">Joko Widodo</a>,</strong></span>
+								<span class="company">Presiden Republik Indonesia</span>
 							</div>
 						</div>
 					</div>
@@ -99,12 +99,12 @@
 							<img src="<?php echo base_url() ?>assets/front/img/dummies/testimonial-author-2.png" alt="" />
 							<blockquote>
 								<p>
-									 Equidem instructior duo ad, mucius eripuit eloquentiam cu mea, suas tota urbanitas id his. Nec ea veritus nostrum.
+									 pesan pesan pesan pesan pesan pesan pesan.
 								</p>
 							</blockquote>
 							<div class="info">
-								<span class="author"><strong><a href="#">Mark Lunch</a>,</strong></span>
-								<span class="company">Mad Business - Marketing Officer</span>
+								<span class="author"><strong><a href="#">Sri Mulyani Indrawati</a>,</strong></span>
+								<span class="company">Menteri Keuangan Republik Indonesia</span>
 							</div>
 						</div>
 					</div>
@@ -114,19 +114,19 @@
 			</div>
 		</div>
 		<div class="span6">
-			<h3 class="heading-success"><span class="btn btn-large btn-success"><i class="m-icon-big-swapright m-icon-white"></i></span>&nbsp;&nbsp;What we do</h3>
+			<h3 class="heading-success"><span class="btn btn-large btn-success"><i class="m-icon-big-swapright m-icon-white"></i></span>&nbsp;&nbsp;Lain-lain</h3>
 			<div class="accordion" id="accordion2">
 				<div class="accordion-group">
 					<div class="accordion-heading">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-						1. Web development services </a>
+						1. Pengumuman </a>
 					</div>
 					<div id="collapseOne" class="accordion-body collapse in">
 						<div class="accordion-inner">
 							<img src="<?php echo base_url() ?>assets/front/img/icons/responsive-icon.png" class="alignleft" alt="" />
-							<h5>Web development services</h5>
+							<h5>Pengumuman Baru</h5>
 							<p>
-								 Ex decore equidem detracto vis, nihil labores euripidis an sea. Nisl solet nonumes ne has, eos nostrum antiopam aliquando at no reque.
+								 Portal Kanwil Jakarta Utara sedang dalam perbaikan.
 							</p>
 							<a href="#">Learn more</a>
 						</div>
@@ -135,46 +135,42 @@
 				<div class="accordion-group">
 					<div class="accordion-heading">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-						2. Web design Services </a>
+						2. Link Aplikasi Direkorat Jenderal Pajak </a>
 					</div>
 					<div id="collapseTwo" class="accordion-body collapse">
 						<div class="accordion-inner">
-							<img src="<?php echo base_url() ?>assets/front/img/icons/design-icon.png" class="alignleft" alt="" />
-							<h5>Web design Services</h5>
-							<p>
-								 Nam omnium salutandi ad, accusam indoctum ne mel, posse expetendis mea at. Luptatum antiopam pro ne. Eum at autem antiopam.
-							</p>
-							<a href="#">Learn more</a>
+							<div class="accordion" id="accordion2">
+								<div class="accordion-group">
+									<a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="#collapseOne">
+									- Sistem Informasi Kepegawaian, Keuangan dan Aktiva </a>
+								</div>
+								<div class="accordion-group">
+									<a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="#collapseTwo">
+									- Sistem Informasi Direktorat Jenderal Pajak </a>
+								</div>
+								<div class="accordion-group">
+									<a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="#collapseOne">
+									- Aplikasi TPT Online </a>
+								</div>
+								<div class="accordion-group">
+									<a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="#collapseTwo">
+									- ePPAT </a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="accordion-group">
 					<div class="accordion-heading">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-						3. Internet marketing services </a>
+						3. Download </a>
 					</div>
 					<div id="collapseThree" class="accordion-body collapse">
 						<div class="accordion-inner">
 							<img src="<?php echo base_url() ?>assets/front/img/icons/statistic-icon.png" class="alignleft" alt="" />
-							<h5>Internet marketing services</h5>
+							<h5>Aplikasi</h5>
 							<p>
-								 Sit et laudem aperiri argumentum. Vim laboramus instructior eu, minim aliquid accusata ut est, sea ut ridens causae quaerendum ea vide.
-							</p>
-							<a href="#">Learn more</a>
-						</div>
-					</div>
-				</div>
-				<div class="accordion-group">
-					<div class="accordion-heading">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-						4. Wordpress development services </a>
-					</div>
-					<div id="collapseFour" class="accordion-body collapse">
-						<div class="accordion-inner">
-							<img src="<?php echo base_url() ?>assets/front/img/icons/wp-icon.png" class="alignleft" alt="" />
-							<h5>Wordpress development services</h5>
-							<p>
-								 Mei ad recteque rationibus, ex quaeque civibus eloquentiam vim. Solet cetero id nam. Ne eos nonumy voluptua, vis nobis euismod qualisque.
+								 Aplikasi eSPT, eFaktur, dan aplikasi lainnya bisa didownload di pajak.go.id.
 							</p>
 							<a href="#">Learn more</a>
 						</div>
@@ -197,7 +193,7 @@
 	<!-- end divider -->
 	<div class="row">
 		<div class="span12">
-			<h3><a class="btn btn-large btn-success" href="#"><i class="m-icon-big-swapdown m-icon-white"></i></a> Recent works</h3>
+			<h3><a class="btn btn-large btn-success" href="#"><i class="m-icon-big-swapdown m-icon-white"></i></a> Foto KPP di Lingkungan Kanwil DJP Jakarta Utara</h3>
 			<div id="latest-work" class="carousel btleft">
 				<div class="carousel-wrapper">
 					<ul class="portfolio-home da-thumbs">
@@ -211,7 +207,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Penjaringan</h5>
 							</div>
 						</div>
 						</li>
@@ -225,7 +221,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Tanjung Priok</h5>
 							</div>
 						</div>
 						</li>
@@ -239,7 +235,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Kelapa Gading</h5>
 							</div>
 						</div>
 						</li>
@@ -253,7 +249,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Pademangan</h5>
 							</div>
 						</div>
 						</li>
@@ -267,7 +263,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Koja</h5>
 							</div>
 						</div>
 						</li>
@@ -281,7 +277,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Pluit</h5>
 							</div>
 						</div>
 						</li>
@@ -295,7 +291,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Madya Jakarta Utara</h5>
 							</div>
 						</div>
 						</li>
@@ -309,7 +305,7 @@
 								</article>
 							</div>
 							<div class="caption">
-								<h5>Portfolio name</h5>
+								<h5>KPP Pratama Jakarta Sunter</h5>
 							</div>
 						</div>
 						</li>

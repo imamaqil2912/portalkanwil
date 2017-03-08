@@ -2,15 +2,16 @@
 	<div class="row">
 		<div class="span3">
 			<div class="widget">
-				<h4>About us</h4>
+				<h4>Tentang Kami</h4>
 				<address>
-				<strong>Scaffold company, Inc.</strong><br />
-				 445 Mypark Ave, Suite 800<br />
-				 Jakarta, Indonesia 14210<br />
-				<abbr title="Phone">P:</abbr> (123) 456-7890 </address>
+				<strong>Kantor Wilayah DJP Jakarta Utara</strong><br />
+				 Gedung Utama KPDJP Lantai 26<br />
+				 Jalan Gatot Subroto No. 40-42
+				 Jakarta<br />
+				<abbr title="Phone">Telepon</abbr> (021) 000-0000 </address>
 				<address>
-				<strong>Contact us</strong><br />
-				<a href="mailto:#">hello@websitename.com</a>
+				<strong>Hubungi Kami</strong><br />
+				<a href="mailto:#">duktekkon.kanwiljakut@pajak.go.id</a>
 				</address>
 			</div>
 		</div>

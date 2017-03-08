@@ -31,8 +31,8 @@ body {
   font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.6em;
-  color: #333333;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 p {
@@ -1405,7 +1405,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .navbar-inner {
-  background: #fff;
+  background: #000;
   border-color:none;
 }
 

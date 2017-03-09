@@ -3,13 +3,13 @@
 		<div class="row">
 			<div class="span12">
 				<div id="slider" class="nivoSlider">
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" alt="" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" alt="" title="#htmlcaption1" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" alt="" data-transition="slideInLeft" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img4.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img4.jpg" alt="" title="#htmlcaption2" />
+					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" alt="" title="#htmlcaption1" />
+					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" alt="" title="#htmlcaption2" />
+					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" alt="" data-transition="slideInLeft"  />
+					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img4.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img4.jpg" alt=""  />
 				</div>
 				<div id="htmlcaption1" class="nivo-html-caption">
-					<h2>Responsive layout</h2>
+					<h2>Selamat Datang di Portal Kanwil Jakut</h2>
 					<p>
 						 At pro solet consequat, feugait expetenda dignissim ne has. Usu tale referrentur eu. No cetero oblique vituperatoribus vix. Vocent suscipiantur eum id, probo facete persius te usu.
 					</p>

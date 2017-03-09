@@ -26,32 +26,18 @@
   <![endif]-->
 </head>
 <body class="hold-transition login-page">
-<div class="container">
-    <div class="row">
-        
-    </div>
-    
-</div>
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html">
-	<img src=/portalkanwil/assets/img/LOGO.png width="180" height="50"></a>
+    <a href="../../index2.html"><b>Portal</b>KANWIL</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">
-	<b>Sign in to start your session</b></p>
+    <p class="login-box-msg">Sign in to start your session</p>
     <div id="infoMessage"><?php echo $message;?></div>
     <?php echo form_open("auth/login");?>
-	<p>
-	<b>Username</b>
-	</p>
     <div class="form-group has-feedback">
       <?php echo form_input($identity);?>
     </div>
-	<p>
-	<b>Password</b>
-	</p>
     <div class="form-group has-feedback">
       <?php echo form_input($password);?>
     </div>
@@ -64,22 +50,17 @@
       </div>
       <!-- /.col -->
       <div class="col-xs-4">
-        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign in</button>
+        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
       </div>
       <!-- /.col -->
     </div>
     <!-- /.social-auth-links -->
 
-    <a href="forgot_password"><b>Forgot Password?</b></a><br>
-	<a href="create_user"><b>Register New User</b></a><br>
+    <a href="forgot_password">I forgot my password</a><br>
   </div>
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
-<div>
-<center><b>&copy; Duktekkom 2017 - All right reserved</b></center>
-<center><b>Design by</b> <a href="https://www.instagram.com/m_doang/"><b>Muhammad</b></a></center>
-</div>
 
 <!-- jQuery 2.2.3 -->
 <script src="<?php echo base_url()?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>

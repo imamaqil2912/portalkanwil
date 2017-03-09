@@ -1,14 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Portral KANWIL | Forgot Password</title>
-  
-  <div class="login-logo">
-    <a href="../../index2.html">
-	<img src=/portalkanwil/assets/img/LOGO.png width="180" height="50"></a>
-  </div>
-  <!-- /.login-logo -->
-  
+  <title>Portral KANWIL | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -29,10 +22,13 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  <div class="form-gap"></div>
-  
+  <div class="login-logo">
+    <a href="../../index2.html">
+	<img src=/portalkanwil/assets/img/LOGO.png width="180" height="50"></a>
+  </div>
+  <!-- /.login-logo -->
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
@@ -40,24 +36,17 @@
               <div class="panel-body">
                 <div class="text-center">
                   <h3><i class="fa fa-lock fa-4x"></i></h3>
-                  <h2 class="text-center">Forgot Password?</h2>
-                  <p>Reset Your password here</p>
+                  <h2 class="text-center">Lupa Kata Sandi?</h2>
+                  <p>Anda bisa me-reset kata sandi anda disini</p>
                   <div class="panel-body">
     
-                    <form id="register-form" role="form" autocomplete="off" class="form" method="post">
-    
-                      <div class="form-group">
-                        <div class="input-group">
-                          <label for="identity"><?php echo (($type=='email') ? sprintf(lang('forgot_password_email_label'), $identity_label) : sprintf(lang('forgot_password_identity_label'), $identity_label));?></label> <br />
-                          <?php echo form_input($identity);?>
-						</div>
-                      </div>
-                      <div class="form-group">
-                        <?php echo form_submit('submit', lang('forgot_password_submit_btn'));?>
-                      </div>
-                      
-                      <input type="hidden" class="hide" name="token" id="token" value=""> 
-                    </form>
+                    <?php echo form_open("auth/forgot_password");?>
+						<p>
+						<label for="identity"> <?php echo (($type=='email') ? sprintf(lang('forgot_password_email_label'), $identity_label) : sprintf(lang('forgot_password_identity_label'), $identity_label));?></label> <br />
+						<?php echo form_input($identity);?>
+						</p>
+						<p><?php echo form_submit('submit', lang('forgot_password_submit_btn'));?></p>
+					<?php echo form_close();?>
     
                   </div>
                 </div>

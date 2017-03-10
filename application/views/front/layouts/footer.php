@@ -11,7 +11,7 @@
 				<abbr title="Phone">Telepon</abbr> (021) 000-0000 </address>
 				<address>
 				<strong>Hubungi Kami</strong><br />
-				<a href="mailto:#">duktekkon.kanwiljakut@pajak.go.id</a>
+				<a href="#">duktekkon.kanwiljakut@pajak.go.id</a>
 				</address>
 			</div>
 		</div>

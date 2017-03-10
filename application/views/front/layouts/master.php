@@ -16,9 +16,7 @@
 <link href="<?php echo base_url() ?>assets/front/css/style.css" rel="stylesheet" />
 <link href="<?php echo base_url() ?>assets/front/color/success.css" rel="stylesheet" />
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+
 <script src="<?php echo base_url() ?>assets/front/js/jquery-1.8.2.min.js"></script>
 <script src="<?php echo base_url() ?>assets/front/js/jquery.easing.1.3.js"></script>
 <script src="<?php echo base_url() ?>assets/front/js/google-code-prettify/prettify.js"></script>

@@ -88,7 +88,7 @@
 			</div>
 			<div class="span6">
 				<p class="pull-right">
-					Designed by <a href="http://iweb-studio.com">@aqilbani</a>
+					Designed by <a href="#">@aqilbani</a>
 				</p>
 			</div>
 		</div>

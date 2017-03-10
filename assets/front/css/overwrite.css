@@ -1,7 +1,7 @@
 
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
-  max-width: 100%;
+  max-width: 50%;
   /* Part 1: Set a maxium relative to the parent */
   width: auto\9;
   /* IE7-8 need help adjusting responsive images */
@@ -31,8 +31,8 @@ body {
   font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.6em;
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 p {
@@ -1405,7 +1405,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .navbar-inner {
-  background: #000;
+  background: #fff;
   border-color:none;
 }
 

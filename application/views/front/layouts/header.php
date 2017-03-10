@@ -12,7 +12,7 @@
 			<div>
 				<nav>
 				<ul class="nav topnav">
-					<li class="dropdown success active">
+					<!--li class="dropdown success active">
 					<a href="index.html"><i class="icon-home icon-white"></i>Beranda</a>
 					</li>
 					<!--	<li class="dropdown primary">

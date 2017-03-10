@@ -5,44 +5,44 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                  <h3 class='box-title'>USERS LIST <?php echo anchor('users/create/','Create',array('class'=>'btn btn-danger btn-sm'));?>
-		<?php echo anchor(site_url('users/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-primary btn-sm"'); ?></h3>
+                  <h3 class='box-title'>USER LIST <?php echo anchor('user/create/','Create',array('class'=>'btn btn-danger btn-sm'));?>
+		<?php echo anchor(site_url('user/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-primary btn-sm"'); ?></h3>
                 </div><!-- /.box-header -->
                 <div class='box-body'>
         <table class="table table-bordered table-striped" id="mytable">
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Ip Address</th>
-		    <th>NIP</th>
-			<th>Nama</th>
-			<th>Nama Kantor</th>
-		    <th>Email</th>
-		    <th>Login terakhir</th>
+		    <th>Nip9</th>
+		    <th>Nama</th>
+		    <th>Password</th>
+		    <th>Jabatan</th>
+		    <th>Unit Kerja</th>
+		    <th>Role</th>
 		    <th>Action</th>
                 </tr>
             </thead>
 	    <tbody>
             <?php
             $start = 0;
-            foreach ($users_data as $users)
+            foreach ($user_data as $user)
             {
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $users->ip_address ?></td>
-		    <td><?php echo $users->username ?></td>
-			<td><?php echo $users->first_name ?></td>
-			<td><?php echo $users->company ?></td>
-		    <td><?php echo $users->email ?></td>
-		    <td><?php echo $users->last_login ?></td>
+		    <td><?php echo $user->nip9 ?></td>
+		    <td><?php echo $user->nama ?></td>
+		    <td><?php echo $user->password ?></td>
+		    <td><?php echo $user->jabatan ?></td>
+		    <td><?php echo $user->unit_kerja ?></td>
+		    <td><?php echo $user->role ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
-			echo anchor(site_url('users/read/'.$users->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm')); 
+			echo anchor(site_url('user/read/'.$user->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('users/update/'.$users->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
+			echo anchor(site_url('user/update/'.$user->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('users/delete/'.$users->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			echo anchor(site_url('user/delete/'.$user->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 			?>
 		    </td>
 	        </tr>

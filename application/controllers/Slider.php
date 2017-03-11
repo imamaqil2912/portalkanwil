@@ -19,11 +19,11 @@ class Slider extends CI_Controller
 	 			$data['scriptmce'] = $this->scripttiny_mce();
 				$data["judul"] = "Pengaturan Banner";
 				$data["det"] = $this->slider_model->tampil_slider();
-				$this->load->view('slider/slider_input',$data);
+				$this->template->load('template','slider/slider_input',$data);
 	}
 	
 	//tambah slider
-	function insert_banner()
+	function insert_slider()
 	{
 				$tgl = " %Y-%m-%d";
 				$jam = "%h:%i:%a";
@@ -50,14 +50,14 @@ class Slider extends CI_Controller
 					echo $this->upload->display_errors();
 				}
 				else {
-					$this->admin_model->jalankan_query_manual("insert into tbl_banner (judul,deskripsi,gambar,stts) 
+					$this->slider_model->jalankan_query_manual("insert into tbl_banner (judul,deskripsi,gambar,stts) 
 					values('".$judul."','".$deskripsi."','".$nama_fl."','".$stts."')");
-					echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/admin/set_banner'>";
+					echo "<meta http-equiv='refresh' content='0; url=".base_url()."slider/set_slider'>";
 				}
 	}
 	
 	//hapus banner
-		function hapus_banner()
+		function hapus_slider()
 	{
 		$kode='';		
 		if ($this->uri->segment(3) === FALSE)
@@ -81,13 +81,13 @@ class Slider extends CI_Controller
 		{
 				$file = 'slider/banner/'.$gb;
 				unlink($file);
-				$data["upd"] = $this->slider_model->hapus_banner($kode,"kode_banner","tbl_banner");
-				echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/set_banner'>";
+				$data["upd"] = $this->slider_model->hapus_slider($kode,"kode_banner","tbl_banner");
+				echo "<meta http-equiv='refresh' content='0; url=".base_url()."slider/set_slider'>";
 			}
 		}
 	
 	//edit manggil form...edit
-	function edit_banner()
+	function edit_slider()
 		{
 		$kode='';		
 		if ($this->uri->segment(3) === FALSE)
@@ -100,28 +100,25 @@ class Slider extends CI_Controller
 		}
 	
 				$data['scriptmce'] = $this->scripttiny_mce();
-				$data["ls"] = $this->admin_model->tampil_detail_banner($kode);
+				$data["ls"] = $this->slider_model->tampil_detail_slider($kode);
 				$data["judul"] = "Edit Banner ";
-				$this->load->view('admin/banner_edit',$data);
-				
+				$this->template->load('template','slider/slider_edit',$data);
 	}
 	
 	//edit simpan..edit
-	function update_banner()
+	function update_slider()
 	{
-		
 				$judul = mysql_real_escape_string($this->input->post('judul'));
 				$deskripsi = mysql_real_escape_string($this->input->post('deskripsi'));
 				$stts = mysql_real_escape_string($this->input->post('stts'));
 				$gbr = $this->input->post('gbr');
 				$id = $this->input->post('id');
 				
-				
 				if(empty($_FILES['userfile']['name']))
 				{
-					$this->admin_model->jalankan_query_manual("update tbl_banner set judul='".$judul."',deskripsi='".$deskripsi."',stts='".$stts."' where 
+					$this->slider_model->jalankan_query_manual("update tbl_banner set judul='".$judul."',deskripsi='".$deskripsi."',stts='".$stts."' where 
 					kode_banner='".$id."'");
-					echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/admin/set_banner'>";
+					echo "<meta http-equiv='refresh' content='0; url=".base_url()."slider/set_banner'>";
 				}
 				else
 				{
@@ -147,9 +144,9 @@ class Slider extends CI_Controller
 					else {
 						$file = './assets/banner/'.$gbr;
 						unlink($file);
-						$this->admin_model->jalankan_query_manual("update tbl_banner set judul='".$judul."',deskripsi='".$deskripsi."',stts='".$stts."', 
+						$this->slider_model->jalankan_query_manual("update tbl_banner set judul='".$judul."',deskripsi='".$deskripsi."',stts='".$stts."', 
 						gambar='".$nama_fl."' where kode_banner='".$id."'");
-						echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/admin/set_banner'>";
+						echo "<meta http-equiv='refresh' content='0; url=".base_url()."slider/set_banner'>";
 					}
 				}
 	}

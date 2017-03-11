@@ -3,10 +3,15 @@
 		<div class="row">
 			<div class="span12">
 				<div id="slider" class="nivoSlider">
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" alt="" title="#htmlcaption1" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" alt="" title="#htmlcaption2" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" alt="" title="#htmlcaption2"  />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/imgta.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/imgta.jpg" alt="" title="#htmlcaption3" />
+					<?php
+					foreach($banner->result_array() as $bn)
+					{
+					?>
+					<img src="<?php echo base_url() ?>assets/slider/<?php echo $bn['gambar']; ?>" data-thumb="<?php echo base_url() ?>assets/slider/<?php echo $bn['gambar']; ?>" alt="" title="<h3><?php echo strip_tags(substr($bn['judul'],0,50)); ?></h3>
+						<?php echo strip_tags(substr($bn['deskripsi'],0,70)); ?>" />
+					<?php
+				}
+				?>
 				</div>
 				<div id="htmlcaption1" class="nivo-html-caption">
 					<h2>Selamat Datang di Portal Kanwil Jakut</h2>

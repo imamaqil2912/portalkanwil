@@ -33,41 +33,41 @@
 		<div class="span3">
 			<div class="well well-primary box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/chart.png" alt="" />
-				<h3>Dashboard Penerimaan</h3>
+				<h3><b>Dashboard Penerimaan</b></h3>
 				<p>
-					 Total Penerimaan Pajak Seluruh KPP di Wilayah Jakarta Utara.
+					 Data Penerimaan Pajak Seluruh KPP di Wilayah Jakarta Utara.
 				</p>
-				<a href="#">Klik Disini</a>
+				<a href="#"><b>Klik Disini</b></a>
 			</div>
 		</div>
 		<div class="span3">
 			<div class="well well-success box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/box-3-white.png" alt="" />
-				<h3>Data <br>Potensi</br></h3>
+				<h3><b>Data <br>Potensi</br></b></h3>
 				<p>
 					 Data dan Potensi Penggalian Pajak di Lingkup Kanwil DJP Jakarta Utara
 				</p>
-				<a href="#">Klik Disini</a>
+				<a href="#"><b>Klik Disini</b></a>
 			</div>
 		</div>
 		<div class="span3">
 			<div class="well well-warning box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/mail.png" alt="" />
-				<h3>Sistem Surat Kanwil (SISUKA)</h3>
+				<h3><b>Sistem Surat Kanwil (SISUKA)</b></h3>
 				<p>
 					 Sistem adminstrasi Surat Masuk dan Surat Keluar Kanwil DJP Jakarta Utara
 				</p>
-				<a href="#">Klik Disini</a>
+				<a href="#"><b>Klik Disini</b></a>
 			</div>
 		</div>
 		<div class="span3">
 			<div class="well well-primary box">
 				<img src="<?php echo base_url() ?>assets/front/img/icons/globe.png" alt="" />
-				<h3>Geo<br>Spasial</br></h3>
+				<h3><b>Geo<br>Spasial</br></b></h3>
 				<p>
 					 Pemetaan Potensi Pajak di Wilayah Jakarta Utara
 				</p>
-				<a href="#">Klik Disini</a>
+				<a href="#"><b>Klik Disini</b></a>
 			</div>
 		</div>
 	</div>

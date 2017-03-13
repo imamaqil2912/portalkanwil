@@ -128,13 +128,66 @@
 					<div id="collapseOne" class="accordion-body collapse in">
 						<div class="accordion-inner">
 							<img src="<?php echo base_url() ?>assets/front/img/icons/responsive-icon.png" class="alignright" alt="" />
-							<h5>Pengumuman Baru</h5>
-								 1. Portal Kanwil Jakarta Utara sedang dalam perbaikan.
-								<br><a href="#">Read More</a></br>
+							<h2>Pengumuman Baru</h2>
+								 1. Portal Kanwil Jakarta Utara sedang dalam perbaikan.</br>
+								<a href="#info" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
+								<!-- Modal -->
+								<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header modal-header-info">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												<i class="glyphicon glyphicon-thumbs-up"></i> Pengumuman I
+											</div>
+											<div class="modal-body">
+												Mohon Bersabar Kami dalam proses pembaharuan aplikasi
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div></br>
+								
+								
 								 2. Perintah Lembur Periode Akhir Tax Amnesti
-								<br><a href="#">Read More</a></br>
+								<br><a href="#info" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
+								<!-- Modal -->
+								<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header modal-header-info">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												<i class="glyphicon glyphicon-thumbs-up"></i> Pengumuman I
+											</div>
+											<div class="modal-body">
+												Mohon Bersabar Kami dalam proses pembaharuan aplikasi
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div></br>
 								 3. Peresmian KP2KP Kepulauan Seribu Oleh Kepala Kanwil DJP Jakarta Utara
-								<br><a href="#">Read More</a></br>
+								<br><a href="#info" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
+								<!-- Modal -->
+								<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header modal-header-info">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												<i class="glyphicon glyphicon-thumbs-up"></i> Pengumuman I
+											</div>
+											<div class="modal-body">
+												Mohon Bersabar Kami dalam proses pembaharuan aplikasi
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div></br>
 						</div>
 					</div>
 				</div>
@@ -145,18 +198,18 @@
 					</div>
 					<div id="collapseTwo" class="accordion-body collapse">
 						<div class="accordion-inner">
+							
 						<img src="<?php echo base_url() ?>assets/front/img/icons/check.png" class="alignright" alt="" />
-							<div>	
-								<br><a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="https://sikka-djp">
-								- Sistem Informasi Kepegawaian, Keuangan dan Aktiva (SIKKA-DJP) </a></br>
-								<br><a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="https://sidjp">
-								- Sistem Informasi Direktorat Jenderal Pajak (SIDJP)</a></br>
-								<br><a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="https://e-reg">
-								- eRegistrasi </a></br>
-								<br><a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="https://e-ppat">
-								- ePPAT </a></br>
+								<?php
+								foreach($link->result_array() as $l){
+									
+								?>
+								<a class="according-toggle" data-toggle="collapse" data-parent"#accordion2" href="<?php echo $l['url']; ?>" >
+								<?php echo $l['nama']; ?> </a> ||
+								<?php
+								}
+								?>
 							</div>
-						</div>
 					</div>
 				</div>
 				<div class="accordion-group">
@@ -416,6 +469,7 @@
 					</ul>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>

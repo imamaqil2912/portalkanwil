@@ -5147,12 +5147,17 @@ input[type="submit"].btn.btn-mini {
   margin: 0;
   line-height: 30px;
 }
+.modal-header-info {
+  margin: 0;
+  color:#000;
+}
 
 .modal-body {
   position: relative;
   max-height: 400px;
   padding: 15px;
   overflow-y: auto;
+  color:#000;
 }
 
 .modal-form {
@@ -6019,4 +6024,39 @@ a.badge:hover {
 
 .affix {
   position: fixed;
+}
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+.badge{
+ background:none;   
+}
+.badge i{
+ color:#5d82c1;   
+}
+.product-category-all li{
+  
+   // border:1px solid #c1c1c2;    
+}
+.product-category-all li{
+ -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important; 
+}
+.icon-data{
+    font-size:25px !important;
+   // margin-top:-4px;
+}
+.product-bread-a{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    
+}
+.product-bread-a a{
+    color:#718ac3;
 }

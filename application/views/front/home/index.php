@@ -129,39 +129,26 @@
 						<div class="accordion-inner">
 							<img src="<?php echo base_url() ?>assets/front/img/icons/responsive-icon.png" class="alignright" alt="" />
 							<h2>Pengumuman Baru</h2>
-								 1. Portal Kanwil Jakarta Utara sedang dalam perbaikan.</br>
-								<a href="#info" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
-								<!-- Modal -->
-								<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header modal-header-info">
-												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												<i class="glyphicon glyphicon-thumbs-up"></i> Pengumuman I
-											</div>
-											<div class="modal-body">
-												Mohon Bersabar Kami dalam proses pembaharuan aplikasi
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-											</div>
-										</div><!-- /.modal-content -->
-									</div><!-- /.modal-dialog -->
-								</div></br>
+							<?php
+							$i = 1;
+							foreach($pengumuman->result_array() as $p)
+							{
 								
-								
-								 2. Perintah Lembur Periode Akhir Tax Amnesti
-								<br><a href="#info" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
+							?>
+								 <?php echo $i;?>. <?php echo $p['judul_pengumuman'];?></br>
+								<a class="btn btn-group" href="#info<?php echo $i;?>" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
 								<!-- Modal -->
-								<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal fade" id="info<?php echo $i;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-header modal-header-info">
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												<i class="glyphicon glyphicon-thumbs-up"></i> Pengumuman I
+												<i class="glyphicon glyphicon-thumbs-up"></i> <?php echo $p['judul_pengumuman']; ?>
 											</div>
 											<div class="modal-body">
-												Mohon Bersabar Kami dalam proses pembaharuan aplikasi
+												<?php echo $p['isi_pengumuman'];?>
+												<br>
+												<a href="<?php echo $p['link_file'];?>">DISINI</a>
 											</div>
 											<div class="modal-footer">
 												<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
@@ -169,26 +156,11 @@
 										</div><!-- /.modal-content -->
 									</div><!-- /.modal-dialog -->
 								</div></br>
-								 3. Peresmian KP2KP Kepulauan Seribu Oleh Kepala Kanwil DJP Jakarta Utara
-								<br><a href="#info" data-toggle="modal"><i class="glyphicon glyphicon-eye-open"></i> Baca Selengkapnya</a>
-								<!-- Modal -->
-								<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header modal-header-info">
-												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												<i class="glyphicon glyphicon-thumbs-up"></i> Pengumuman I
-											</div>
-											<div class="modal-body">
-												Mohon Bersabar Kami dalam proses pembaharuan aplikasi
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-											</div>
-										</div><!-- /.modal-content -->
-									</div><!-- /.modal-dialog -->
-								</div></br>
-						</div>
+								<?php
+								$i++;
+							}
+							?>
+								</div>
 					</div>
 				</div>
 				<div class="accordion-group">

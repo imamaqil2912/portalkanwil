@@ -9,6 +9,7 @@ class Landing extends CI_Controller {
 		$this->load->library(array('session','form_validation','pagination'));
 		$this->load->model(array('user_model'));
 		$this->load->model(array('admin_link_model'));
+		$this->load->model(array('admin_pengumuman_model'));
   	}
 
 	public function index()
@@ -17,6 +18,7 @@ class Landing extends CI_Controller {
         $data['menu'] = '0';
 		$data['banner'] = $this->user_model->tampil_banner();
 		$data['link'] = $this->admin_link_model->show_all();
+		$data['pengumuman'] = $this->admin_pengumuman_model->show_all();
         // $data['css']=array('css/datatables.min');
         // $data['js']= array('js/jquery.dataTables','js/dataTables.bootstrap');
 		$this->load->view('front/layouts/master',$data);

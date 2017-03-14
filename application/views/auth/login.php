@@ -34,7 +34,7 @@
 </div>
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html">
+    <a href="../../portalkanwil">
 	<img src=/portalkanwil/assets/img/LOGO.png width="180" height="50"></a>
   </div>
   <!-- /.login-logo -->

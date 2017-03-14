@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +9,9 @@
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap/font-awesome/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap/font-awesome/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url()?>assets/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
@@ -34,8 +33,10 @@
 </div>
 <div class="login-box">
   <div class="login-logo">
+
     <a href="../../portalkanwil">
-	<img src=/portalkanwil/assets/img/LOGO.png width="180" height="50"></a>
+	<img src="../assets/img/LOGO.png " width="180" height="50"></a>
+
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

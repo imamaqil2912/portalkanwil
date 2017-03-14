@@ -11,7 +11,7 @@
 				<abbr title="Phone">Telepon</abbr> (021) 000-0000 </address>
 				<address>
 				<strong>Hubungi Kami</strong><br />
-				<a href="mailto:#">duktekkon.kanwiljakut@pajak.go.id</a>
+				<a href="#">duktekkon.kanwiljakut@pajak.go.id</a>
 				</address>
 			</div>
 		</div>
@@ -34,23 +34,7 @@
 				<h4>Latest tweets</h4>
 				<div class="twitter">
 				</div>
-				<script type="text/javascript">
-						$(document).ready(function(){
-						   //TWITTER
-							$(".twitter").tweet({
-								  join_text: "auto",
-								  username: "wrapbootstrap",
-								  avatar_size: 20,
-								  count: 2,
-								  auto_join_text_default: "we said,",
-								  auto_join_text_ed: "we",
-								  auto_join_text_ing: "we were",
-								  auto_join_text_reply: "we replied",
-								  auto_join_text_url: "we were checking out",
-								  loading_text: "loading tweets..."
-							});
-						});
-					</script>
+				
 			</div>
 		</div>
 		<div class="span3">

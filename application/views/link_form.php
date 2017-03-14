@@ -34,7 +34,7 @@
         </td>
 	    <input type="hidden" name="id" value="<?php echo $id; ?>" /> 
 	    <tr><td colspan='2'><button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-	    <a href="<?php echo site_url('link') ?>" class="btn btn-default">Cancel</a></td></tr>
+	    <a href="<?php echo site_url('admin_link') ?>" class="btn btn-default">Cancel</a></td></tr>
 	
     </table></form>
     </div><!-- /.box-body -->

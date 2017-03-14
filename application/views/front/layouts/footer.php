@@ -88,7 +88,7 @@
 			</div>
 			<div class="span6">
 				<p class="pull-right">
-					Designed by <a href="#">@aqilbani</a>
+					Designed by <a href="#">Kanwil Dev. Team</a>
 				</p>
 			</div>
 		</div>

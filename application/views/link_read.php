@@ -15,7 +15,7 @@
 	    <tr><td>Hits</td><td><?php echo $hits; ?></td></tr>
 	    <tr><td>Ip</td><td><?php echo $ip; ?></td></tr>
 	    <tr><td>Waktu</td><td><?php echo $waktu; ?></td></tr>
-	    <tr><td></td><td><a href="<?php echo site_url('link') ?>" class="btn btn-default">Cancel</a></td></tr>
+	    <tr><td></td><td><a href="<?php echo site_url('admin_link') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
         </div><!-- /.box-body -->
               </div><!-- /.box -->

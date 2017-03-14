@@ -3,27 +3,32 @@
 		<div class="row">
 			<div class="span12">
 				<div id="slider" class="nivoSlider">
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img1.jpg" alt="" title="#htmlcaption1" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img2.jpg" alt="" title="#htmlcaption2" />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img3.jpg" alt="" title="#htmlcaption2"  />
-					<img src="<?php echo base_url() ?>assets/front/img/slides/nivo/img4.jpg" data-thumb="<?php echo base_url() ?>assets/front/img/slides/nivo/img4.jpg" alt="" title="#htmlcaption2" />
+					<?php
+					foreach($banner->result_array() as $bn)
+					{
+					?>
+					<img src="<?php echo base_url() ?>assets/slider/<?php echo $bn['gambar']; ?>" data-thumb="<?php echo base_url() ?>assets/slider/<?php echo $bn['gambar']; ?>" alt="" title="<h3><?php echo strip_tags(substr($bn['judul'],0,50)); ?></h3>
+						<?php echo strip_tags(substr($bn['deskripsi'],0,70)); ?>" />
+					<?php
+				}
+				?>
 				</div>
 				<div id="htmlcaption1" class="nivo-html-caption">
-					<h2>Selamat Datang di Portal Kanwil Jakut</h2>
+					<h2><b>Selamat Datang di Portal Kanwil Jakut</b></h2>
 					<p>
-						 Siap
+						 Selamat datang di Portal Kanwil DJP Jakarta Utara. Dengan tampilan baru, kini portal lebih dinamis mengikuti perkembangan teknologi. Penguatan integrasi database membuat data yang ada pada Portal menjadi semakin baik.
 					</p>
 				</div>
 				<div id="htmlcaption2" class="nivo-html-caption">
-					<h2>Lot of features</h2>
+					<h2><b>Rapat Kordinasi Gabungan</b></h2>
 					<p>
-						 Tale saepe eu ius. Illum lorem mediocrem ad nec, aliquam consetetur quo no. In bonorum repudiare pri, ut vis verterem expetendis definitionem. Voluptua gloriatur eam eu.
+						 Sinergi dan Komunikasi, Kunci Pengamanan Penerimaan Pajak
 					</p>
 				</div>
-				<div id="htmlcaption2" class="nivo-html-caption">
-					<h2>Lot of features</h2>
+				<div id="htmlcaption3" class="nivo-html-caption">
+					<h2><b>Periode Terakhir Amnesti Pajak</b></h2>
 					<p>
-						 Tale saepe eu ius. Illum lorem mediocrem ad nec, aliquam consetetur quo no. In bonorum repudiare pri, ut vis verterem expetendis definitionem. Voluptua gloriatur eam eu.
+						 Program Amnesti Pajak Memasuki tahap akhir periode. Tetap Semangat Satu Jiwa!
 					</p>
 				</div>
 			</div>

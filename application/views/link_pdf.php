@@ -30,19 +30,19 @@
 		<th>Waktu</th>
 		
             </tr><?php
-            foreach ($link_data as $link)
+            foreach ($admin_link_data as $admin_link)
             {
                 ?>
                 <tr>
 		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $link->nama ?></td>
-		      <td><?php echo $link->url ?></td>
-		      <td><?php echo $link->tab_baru ?></td>
-		      <td><?php echo $link->url_gambar ?></td>
-		      <td><?php echo $link->urutan ?></td>
-		      <td><?php echo $link->hits ?></td>
-		      <td><?php echo $link->ip ?></td>
-		      <td><?php echo $link->waktu ?></td>	
+		      <td><?php echo $admin_link->nama ?></td>
+		      <td><?php echo $admin_link->url ?></td>
+		      <td><?php echo $admin_link->tab_baru ?></td>
+		      <td><?php echo $admin_link->url_gambar ?></td>
+		      <td><?php echo $admin_link->urutan ?></td>
+		      <td><?php echo $admin_link->hits ?></td>
+		      <td><?php echo $admin_link->ip ?></td>
+		      <td><?php echo $admin_link->waktu ?></td>	
                 </tr>
                 <?php
             }

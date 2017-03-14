@@ -5,8 +5,8 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                  <h3 class='box-title'>LINK LIST <?php echo anchor('link/create/','Create',array('class'=>'btn btn-danger btn-sm'));?>
-		<?php echo anchor(site_url('link/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-primary btn-sm"'); ?></h3>
+                  <h3 class='box-title'>LINK LIST <?php echo anchor('admin_link/create/','Create',array('class'=>'btn btn-danger btn-sm'));?>
+		<?php echo anchor(site_url('admin_link/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-primary btn-sm"'); ?></h3>
                 </div><!-- /.box-header -->
                 <div class='box-body'>
         <table class="table table-bordered table-striped" id="mytable">
@@ -27,26 +27,26 @@
 	    <tbody>
             <?php
             $start = 0;
-            foreach ($link_data as $link)
+            foreach ($admin_link_data as $admin_link)
             {
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $link->nama ?></td>
-		    <td><?php echo $link->url ?></td>
-		    <td><?php echo $link->tab_baru ?></td>
-		    <td><?php echo $link->url_gambar ?></td>
-		    <td><?php echo $link->urutan ?></td>
-		    <td><?php echo $link->hits ?></td>
-		    <td><?php echo $link->ip ?></td>
-		    <td><?php echo $link->waktu ?></td>
+		    <td><?php echo $admin_link->nama ?></td>
+		    <td><?php echo $admin_link->url ?></td>
+		    <td><?php echo $admin_link->tab_baru ?></td>
+		    <td><?php echo $admin_link->url_gambar ?></td>
+		    <td><?php echo $admin_link->urutan ?></td>
+		    <td><?php echo $admin_link->hits ?></td>
+		    <td><?php echo $admin_link->ip ?></td>
+		    <td><?php echo $admin_link->waktu ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
-			echo anchor(site_url('link/read/'.$link->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm')); 
+			echo anchor(site_url('admin_link/read/'.$admin_link->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('link/update/'.$link->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
+			echo anchor(site_url('admin_link/update/'.$admin_link->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('link/delete/'.$link->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			echo anchor(site_url('admin_link/delete/'.$admin_link->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 			?>
 		    </td>
 	        </tr>
